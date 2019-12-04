@@ -1,0 +1,43 @@
+.background img{
+    width: 80%;
+}
+
+.background button{
+    margin: 20px;;
+}
+
+.modal-content{
+    background: transparent;
+    border: none;
+}
+
+.img-play{
+    margin-top: 22px;
+}
+
+.img-play img{
+    width: 230px;
+    height: 130px;
+    
+}
+
+.img-play:hover img{
+    
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.icon-play{
+    position: relative;
+    top: -50%;
+}
+
+.icon-play span i{
+    font-size: 60px;
+    color: whitesmoke;
+    transition:all 0.5s;
+}
+
+.icon-play span i:hover{
+    color: red;
+    cursor: pointer;
+}
