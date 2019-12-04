@@ -1,13 +1,28 @@
+body{
+    overflow: hidden;
+}
+
 .background img{
     width: 80%;
+    height: 100%;
+    
 }
 
 .background button{
-    margin: 20px;;
+    margin: 20px;
+}
+
+.modal-header{
+    background-color: seashell;
 }
 
 .modal-content{
     background: transparent;
+    border: none;
+    
+}
+
+.modal-body{
     border: none;
 }
 
@@ -16,14 +31,19 @@
 }
 
 .img-play img{
-    width: 230px;
-    height: 130px;
+    max-width: 100%;
+    width: 280px;
+    height: 150px;
+    transition: transform 1s;
     
 }
 
 .img-play:hover img{
     
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 10px 15px 10px rgba(0, 0, 0, 0.5);
+    transition: .5s;
+    transform: scale(1.1);
+
 }
 
 .icon-play{
