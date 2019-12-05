@@ -9,17 +9,21 @@ var pause3 = myVideo3;
 function pauses1(){
     if(myVideo1.play)
     pause1.pause();
+    myVideo1.currentTime = 0;
+
 }
 
 function pauses2(){
 
     if(myVideo2.play)
     pause2.pause();
+    myVideo2.currentTime = 0;
 }
 
 function pauses3(){
     if(myVideo3.play)
     pause3.pause();
+    myVideo3.currentTime = 0;
 }
 
 function playPause1() {
