@@ -10,6 +10,10 @@ body{
     background-repeat: no-repeat;
 }
 
+.vid-container{
+    display: none;
+}
+
 .vid-container video{
     
     height: 285px;
@@ -86,3 +90,5 @@ body{
     background-position: center;
     background-size: cover;
 }
+
+
