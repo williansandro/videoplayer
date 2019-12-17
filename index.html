@@ -18,109 +18,32 @@
 
 <body>
 
-  <div class="background container-fluid text-center d-flex ">
-    <img src="files/img/bground.png" alt="imagem de fundo">
+  <div class="container fluid bg">
 
-    <div class="row flex-column ">
-
-      <div class="img-play ">
-        <img src="./files/img/image1.png" alt="image-capa" class="img-fluid">
-        <div class="icon-play">
-          <span><i class="fab fa-youtube" onclick=playPause1() role="button" data-toggle="modal"
-              data-target="#video1"></i></span>
-
-        </div>
-      </div>
-
-      <div class="img-play ">
-        <img src="./files/img/image2.jpg" alt="image-capa" class="img-fluid">
-        <div class="icon-play">
-          <span><i class="fab fa-youtube" onclick=playPause2() role="button" data-toggle="modal"
-              data-target="#video2"></i></span>
-        </div>
-
-      </div>
-
-      <div class="img-play ">
-        <img src="./files/img/image3.png" alt="image-capa" class="img-fluid">
-        <div class="icon-play">
-          <span><i class="fab fa-youtube" onclick=playPause3() role="button" data-toggle="modal"
-              data-target="#video3"></i></span>
-        </div>
-      </div>
-
-
-    </div>
-  </div>
-
-
-  <!--Modal do Vídeo 1-->
-
-  <div class="modal fade" data-backdrop="static" id="video1" tabindex="-1" role="dialog">
-
-
-    <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content">
-
-        <div class="modal-body">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-            <span aria-hidden="true" onclick=pauses1()>&times;</span>
-          </button>
-          <video width="100%" controls id="videos1">
-            <source src="./files/media/video1.mp4" type="video/mp4">
-          </video>
-        </div>
-
-      </div>
+    <div class="vid-container">
+      <video controls >
+        <source type="video/mp4">
+      </video>
+      <audio class="song">
+        <source src="./files/media/">
+      </audio>
     </div>
 
-  </div>
-  <!--Modal do Vídeo 2-->
-  <div class="modal fade" data-backdrop="static" id="video2" tabindex="-1" role="dialog">
+    <div class="sound-picker d-flex   justify-content-between align-items-center text-center">
+      <button data-sound="files/media/musica1.mp4" data-video="files/media/video1.m4v" class="imagens imagem-video1 btn  btn-lg"><i class="fas fa-play"></i></button>
 
-    <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content">
+      <button data-sound="files/media/musica2.mp4" data-video="files/media/video2.mp4" class="imagens imagem-video2 btn  btn-lg"><i class="run fas fa-play"></i></button>
 
-        <div class="modal-body">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-            <span aria-hidden="true" onclick=pauses2()>&times;</span>
-          </button>
-          <video width="100%" controls id="videos2">
-            <source src="./files/media/video2.mp4" type="video/mp4">
-          </video>
-        </div>
-
-      </div>
+      <button data-sound="files/media/musica3.mp4" data-video="files/media/video3.m4v" class="imagens imagem-video3 btn  btn-lg"><i class="fas fa-play"></i></button>
     </div>
 
-  </div>
-
-  <!--Modal do Vídeo 3-->
-
-  <div class="modal fade" data-backdrop="static" id="video3" tabindex="-1" role="dialog">
-
-    <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content">
-
-        <div class="modal-body">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-            <span aria-hidden="true" onclick=pauses3()>&times;</span>
-          </button>
-          <video width="100%" controls id="videos3">
-            <source src="./files/media/video3.mp4" type="video/mp4">
-          </video>
-        </div>
-
-      </div>
-    </div>
 
   </div>
 
 
-
+  <script src="app.js"></script>
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.js"></script>
-  <script src="app.js"></script>
 
 
 
