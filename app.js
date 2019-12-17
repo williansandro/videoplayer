@@ -1,48 +1,43 @@
-var myVideo1 = document.getElementById("videos1");
-var myVideo2 = document.getElementById("videos2");
-var myVideo3 = document.getElementById("videos3");
+const song = document.querySelector(".song");
+const play = document.querySelector(".play");
+const replay = document.querySelector(".replay");
+const video = document.querySelector(".vid-container video");
 
-var pause1 = myVideo1;
-var pause2 = myVideo2;
-var pause3 = myVideo3;
+const sounds = document.querySelectorAll(".sound-picker button");
 
-function pauses1(){
-    if(myVideo1.play)
-    pause1.pause();
-    myVideo1.currentTime = 0;
+sounds.forEach(sound => {
+    sound.addEventListener("click", function() {
+      song.src = this.getAttribute("data-sound");
+      video.src = this.getAttribute("data-video");
+      
+    });
+  });
+  
+  play.addEventListener("click", () => {
+    song.play();
+  });
+
+  replay.addEventListener("click", function() {
+    restartSong(song);
+    
+  });
+
+
+  const restartSong = song =>{
+    let currentTime = song.currentTime;
+    song.currentTime = 0;
+    console.log("ciao")
 
 }
 
-function pauses2(){
-
-    if(myVideo2.play)
-    pause2.pause();
-    myVideo2.currentTime = 0;
-}
-
-function pauses3(){
-    if(myVideo3.play)
-    pause3.pause();
-    myVideo3.currentTime = 0;
-}
-
-function playPause1() {
-    if (myVideo1.paused)
-        myVideo1.play();
-    else
-        myVideo1.pause();
-}
-
-function playPause2() {
-    if (myVideo2.paused)
-        myVideo2.play();
-    else
-        myVideo2.pause();
-}
-
-function playPause3() {
-    if (myVideo3.paused)
-        myVideo3.play();
-    else
-        myVideo3.pause();
-} 
+const checkPlaying = song => {
+    if (song.paused) {
+      song.play();
+      video.play();
+      play.src = "./svg/pause.svg"
+    } else {
+      song.pause();
+      video.pause();
+      
+    }
+  };
